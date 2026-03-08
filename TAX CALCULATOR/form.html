@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+
+// define a function
+function calculateTax()
+{
+    var purchase = document.getElementById("purchase").value;
+
+    var taxRate = 0.0825;
+    var tax = purchase * taxRate;
+    var total = parseFloat(purchase) + tax;
+
+    document.getElementById("tax").value = tax.toFixed(2);
+    document.getElementById("total").value = total.toFixed(2);
+}
+
+</script>
+
+</head>
+
+<body>
+
+<br>
+
+<h2>Sales Tax Calculator</h2>
+
+<form>
+
+<label for="purchase">Purchase Amount:</label><br>
+<input type="text" id="purchase" name="purchase"><br><br>
+
+<label for="tax">Tax (8.25%):</label><br>
+<input type="text" id="tax" disabled><br><br>
+
+<label for="total">Total:</label><br>
+<input type="text" id="total" disabled><br><br>
+
+<input type="button" value="Calculate Total" onclick="calculateTax()">
+
+</form>
+
+</body>
+</html>
