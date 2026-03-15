@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Cars Quiz</title>
+<meta charset="UTF-8">
+<title>Cars Quiz</title>
+
+<script src="quiz.js"></script>
+
 </head>
 
 <body>
 
 <h1>Cars Knowledge Quiz</h1>
 
-<!-- Add your uploaded photo file here -->
 <img src="images/car1.jpg" alt="Car Image" width="400"><br><br>
 
 <form>
 
-    <!-- Question 1 (Radio) -->
-    <h3>1. Which company makes the Mustang?</h3>
+<h3>1. Which company makes the Mustang?</h3>
 
-    <input type="radio" id="ford" name="q1" value="Ford">
-    <label for="ford">Ford</label><br>
+<input type="radio" id="ford" name="q1">
+<label for="ford">Ford</label><br>
 
-    <input type="radio" id="chevy" name="q1" value="Chevrolet">
-    <label for="chevy">Chevrolet</label><br>
+<input type="radio" id="chevy" name="q1">
+<label for="chevy">Chevrolet</label><br>
 
-    <input type="radio" id="dodge" name="q1" value="Dodge">
-    <label for="dodge">Dodge</label><br><br>
-
-
-    <!-- Question 2 (Radio) -->
-    <h3>2. Which brand has a prancing horse logo?</h3>
-
-    <input type="radio" id="bmw" name="q2" value="BMW">
-    <label for="bmw">BMW</label><br>
-
-    <input type="radio" id="ferrari" name="q2" value="Ferrari">
-    <label for="ferrari">Ferrari</label><br>
-
-    <input type="radio" id="audi" name="q2" value="Audi">
-    <label for="audi">Audi</label><br><br>
+<input type="radio" id="dodge" name="q1">
+<label for="dodge">Dodge</label><br><br>
 
 
-    <!-- Question 3 (Checkbox) -->
-    <h3>3. Which are SUV models? (Select all that apply)</h3>
+<h3>2. Which brand has a prancing horse logo?</h3>
 
-    <input type="checkbox" id="explorer" name="q3" value="Explorer">
-    <label for="explorer">Ford Explorer</label><br>
+<input type="radio" id="bmw" name="q2">
+<label for="bmw">BMW</label><br>
 
-    <input type="checkbox" id="camry" name="q3" value="Camry">
-    <label for="camry">Toyota Camry</label><br>
+<input type="radio" id="ferrari" name="q2">
+<label for="ferrari">Ferrari</label><br>
 
-    <input type="checkbox" id="tahoe" name="q3" value="Tahoe">
-    <label for="tahoe">Chevrolet Tahoe</label><br>
-
-    <input type="checkbox" id="civic" name="q3" value="Civic">
-    <label for="civic">Honda Civic</label><br><br>
+<input type="radio" id="audi" name="q2">
+<label for="audi">Audi</label><br><br>
 
 
-    <!-- Question 4 (Checkbox) -->
-    <h3>4. Which are electric vehicle brands? (Select all that apply)</h3>
+<h3>3. Which are SUV models? (Select all that apply)</h3>
 
-    <input type="checkbox" id="tesla" name="q4" value="Tesla">
-    <label for="tesla">Tesla</label><br>
+<input type="checkbox" id="explorer">
+<label for="explorer">Ford Explorer</label><br>
 
-    <input type="checkbox" id="rivian" name="q4" value="Rivian">
-    <label for="rivian">Rivian</label><br>
+<input type="checkbox" id="camry">
+<label for="camry">Toyota Camry</label><br>
 
-    <input type="checkbox" id="toyota" name="q4" value="Toyota">
-    <label for="toyota">Toyota</label><br>
+<input type="checkbox" id="tahoe">
+<label for="tahoe">Chevrolet Tahoe</label><br>
 
-    <input type="checkbox" id="lucid" name="q4" value="Lucid">
-    <label for="lucid">Lucid Motors</label><br><br>
+<input type="checkbox" id="civic">
+<label for="civic">Honda Civic</label><br><br>
 
 
-    <input type="submit" value="Submit Quiz">
-    <input type="reset" value="Reset Quiz">
+<h3>4. Which are electric vehicle brands? (Select all that apply)</h3>
+
+<input type="checkbox" id="tesla">
+<label for="tesla">Tesla</label><br>
+
+<input type="checkbox" id="rivian">
+<label for="rivian">Rivian</label><br>
+
+<input type="checkbox" id="toyota">
+<label for="toyota">Toyota</label><br>
+
+<input type="checkbox" id="lucid">
+<label for="lucid">Lucid Motors</label><br><br>
+
+
+<input type="button" value="Submit Quiz" onclick="gradeQuiz()">
+<input type="reset" value="Reset Quiz">
 
 </form>
+
+<br>
+
+<div id="output"></div>
 
 </body>
 </html>
