@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+
+<script>
+function product() {
+    var multiplicand = document.getElementById("multiplicand").value;
+    var multiplier = document.getElementById("multiplier").value;
+
+    document.getElementById("math-output").innerHTML = "";
+
+    for (var x = 1; x <= multiplier; x++) {
+        document.getElementById("math-output").innerHTML += 
+            multiplicand + " x " + x + " = " + (multiplicand * x) + "<br>";
+    }
+}
+</script>
+
+<form name="multiply">
+    <label for="multiplicand">Multiplicand: </label><br>
+    <input type="number" id="multiplicand"><br>
+
+    <label for="multiplier">Multiplier: </label><br>
+    <input type="number" id="multiplier"><br><br>
+
+    <input type="button" value="Click Here for Times Table" onclick="product()">
+</form>
+
+<div id="math-output"></div>
+
+</body>
+</html>
