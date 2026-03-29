@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My 10 Favorite Items</title>
+</head>
+<body>
+
+<h1>My 10 Favorite Items</h1>
+
+<div id="favorites-list"></div>
+
+<script>
+    // Array with your 10 favorite items
+    var favorites = [
+        "UFC",
+        "WWE",
+        "350Z",
+        "Genesis Coupe",
+        "Xbox 360",
+        "Need for Speed",
+        "Fast and Furious: Tokyo Drift",
+        "Spider-Man",
+        "Batman",
+        "Dragon Ball Z"
+    ];
+
+    // Start an unordered list
+    var listHTML = "<ul>";
+
+    // Loop through the array and add each item as a list element
+    for (var i = 0; i < favorites.length; i++) {
+        listHTML += "<li>" + favorites[i] + "</li>";
+    }
+
+    // Close the list
+    listHTML += "</ul>";
+
+    // Display the list on the webpage
+    document.getElementById("favorites-list").innerHTML = listHTML;
+</script>
+
+</body>
+</html>
