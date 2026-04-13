@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Table</title>
+</head>
+<body>
+
+<script>
+// Employee method (returns a table row)
+function printEmployee() {
+    return "<tr>" +
+        "<td>" + this.name + "</td>" +
+        "<td>" + this.title + "</td>" +
+        "<td>" + this.phone + "</td>" +
+    "</tr>";
+}
+
+// Constructor
+function Employee(name, title, phone) {
+    this.name = name;
+    this.title = title;
+    this.phone = phone;
+    this.printEmployee = printEmployee;
+}
+
+// Create employees
+var nick = new Employee("Nick", "Instructor", "(956) 872-3445");
+var lisa = new Employee("Lisa Simpson", "Teacher", "(956) 333-1111");
+var mike = new Employee("Mike Tyson", "Boxer", "(956) 787-2222");
+
+// Store in array
+var empArray = [nick, lisa, mike];
+
+// Build table
+document.write("<table border='1' style='border-collapse: collapse;'>");
+
+// Header row
+document.write("<tr><th>Name</th><th>Title</th><th>Phone</th></tr>");
+
+// Data rows
+for (var i = 0; i < empArray.length; i++) {
+    document.write(empArray[i].printEmployee());
+}
+
+document.write("</table>");
+</script>
+
+</body>
+</html>
